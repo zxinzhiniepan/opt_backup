@@ -1,4 +1,5 @@
-export  PATH=${PATH}:/opt/mysql/mysql_5720/bin
+MYSQLDIR=/opt/databases/mysql/bin/bin
+export  PATH=${PATH}:${MYSQLDIR}
 alias mysqllogin="mysql -ubook6 -p123"
 # alias mysqllogin="mysql -uroot -p93o721"
 # export  CATALINA_HOME=/usr/local/lib64/apache-tomcat-9.0.1
