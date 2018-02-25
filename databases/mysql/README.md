@@ -15,15 +15,15 @@
     useradd -r -g mysql -s /bin/false mysql
 ### 预编译
     cmake .. -DCMAKE_INSTALL_PREFIX=/opt/databases/mysql/bin \
-    -DMYSQL_DATADIR=/opt/databases/mysql/bin/data/mysql \
-    -DWITH_BOOST=/home/zhanghua/.opt/databases/mysql/distfiles/tmp/mysql-5.7.21/boost/boost_1_59_0 \
-    -DSYSCONFDIR=/opt/databases/mysql/bin/etc \
-    -DWITH_INNOBASE_STORAGE_ENGINE=1 \
-    -DWITH_PARTITION_STORAGE_ENGINE=1 \
-    -DWITH_FEDERATED_STORAGE_ENGINE=1 \
-    -DWITH_BLACKHOLE_STORAGE_ENGINE=1 \
-    -DWITH_MYISAM_STORAGE_ENGINE=1 \
-    -DENABLED_LOCAL_INFILE=1 \         
+        -DMYSQL_DATADIR=/opt/databases/mysql/bin/data/mysql \
+        -DWITH_BOOST=/home/zhanghua/.opt/databases/mysql/distfiles/tmp/mysql-5.7.21/boost/boost_1_59_0 \
+        -DSYSCONFDIR=/opt/databases/mysql/bin/etc \
+        -DWITH_INNOBASE_STORAGE_ENGINE=1 \
+        -DWITH_PARTITION_STORAGE_ENGINE=1 \
+        -DWITH_FEDERATED_STORAGE_ENGINE=1 \
+        -DWITH_BLACKHOLE_STORAGE_ENGINE=1 \
+        -DWITH_MYISAM_STORAGE_ENGINE=1 \
+        -DENABLED_LOCAL_INFILE=1 \         
 ### 编译安装
     make -j 6
     sudo make install
