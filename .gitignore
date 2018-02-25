@@ -1,4 +1,5 @@
 */*/bin/*
 **/*.tar*
 *.tar*
+*.out
 utils_user/proxy/XX-Net/*
