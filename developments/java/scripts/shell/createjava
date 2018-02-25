@@ -1,0 +1,27 @@
+#!/bin/bash
+BASEDIR=`pwd`
+echo "Please input name of project"
+PROJECT=$1
+PROJECTPATH=${BASEDIR}"/${PROJECT}"
+RESOURCESDIR=/home/zhanghua/.opt/developments/java/resources
+mkdir -p ${BASEDIR}/${PROJECT}
+cd  ${PROJECTPATH}
+gradle init && rm build.gradle && cp -r ${RESOURCESDIR}/java/configs/gradle/build_webApp.gradle ${BASEDIR}/${PROJECT}/build.gradle 
+# 创建index
+#gradle iWP
+
+#不创建index
+case $1 in
+    *)
+        gradle iWP
+        ;;
+    noindex)
+        gradle initDir
+        ;;
+esac
+
+WEBSRC=${BASEDIR}/${PROJECT}/src/main/webapp
+# cp -r /home/zhanghua/.java/configs/tomcat/web.xml ${WEBSRC}/WEB-INF/
+# cp -r /home/zhanghua/.java/configs/tomcat/error ${WEBSRC}/
+# mv build.xml ${PROJECTPATH}/ 
+#ln -s /opt/tomcat/current-tomcat/logs/catalina.out ${BASEDIR}/${PROJECT}/build/logs
