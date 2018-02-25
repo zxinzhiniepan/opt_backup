@@ -45,3 +45,9 @@
     ../bin/mysqld --defaults-file=/opt/databases/mysql/bin/etc/my.cnf  
         --initialize-insecure 
         --user=mysql
+### 自动提供安全连接
+    bin/mysql_ssl_rsa_setup
+### 开始启动服务（必须）
+    bin/mysqld_safe --user=mysql &
+### 移动启动服务文件到相关目录
+    cp support-files/mysql.server /etc/init.d/mysql.server
