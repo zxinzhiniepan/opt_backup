@@ -1,5 +1,7 @@
 #!/bin/bash
 udiskie &
+# 电源管理
+xfce4-power-manager
 # 壁纸须先安装feh，并在此指定路径
 #exec --no-startup-id feh --bg-scale "/home/zhanghua/MultiMedia/picture/wallpaper/aimiliya02.jpg" &
 #/home/zhanghua/MultiMedia/picture/wallpaper &
