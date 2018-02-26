@@ -18,7 +18,7 @@ xcompmgr -Ss -n -Cc -fF -I-10 -O-10 -D1 -t-3 -l-4 -r4 &
 # 触摸设置
 sh /home/zhanghua/.opt/utils_user/synatics/set_touchpad &
 
-# gtk-redshift &
+gtk-redshift &
 # shadowsocks &
 # devmon 2>&1 > /dev/null &
 
