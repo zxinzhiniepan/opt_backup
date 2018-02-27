@@ -6,7 +6,7 @@ PROJECTPATH=${BASEDIR}"/${PROJECT}"
 RESOURCESDIR=/home/zhanghua/.opt/developments/java/resources
 mkdir -p ${BASEDIR}/${PROJECT}
 cd  ${PROJECTPATH}
-gradle init && rm build.gradle && cp -r ${RESOURCESDIR}/java/configs/gradle/build_webApp.gradle ${BASEDIR}/${PROJECT}/build.gradle 
+gradle init && rm build.gradle && cp -r ${RESOURCESDIR}/java/configs/gradle/build.gradle ${BASEDIR}/${PROJECT}/build.gradle 
 # 创建index
 #gradle iWP
 
