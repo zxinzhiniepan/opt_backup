@@ -18,7 +18,7 @@ xcompmgr -Ss -n -Cc -fF -I-10 -O-10 -D1 -t-3 -l-4 -r4 &
 # 触摸设置
 sh /home/zhanghua/.opt/utils_user/synatics/set_touchpad &
 #触摸板打字防误触
-syndaemon -t -k -i 2 -d &
+syndaemon -t -k -i 1 -d &
 
 gtk-redshift &
 # shadowsocks &
