@@ -5,7 +5,7 @@
 # 提取字符串
 
 # 时间
-DATE=`date +'%Y-%m-%d'`
+DATE=`date +'%Y-%m-%d %H:%M:%S'`
 
 # 创建java源代码
 function createJava() {
