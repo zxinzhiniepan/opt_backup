@@ -18,16 +18,26 @@ dependencies {
     compile files('src/main/resources/configs')    // 编译时的环境
     runtime files('src/main/resources/configs')    // 运行时的环境
 
-    // tomcat容器
-    def tomcatVersion = '9.0.1'
-        tomcat "org.apache.tomcat.embed:tomcat-embed-core:${tomcatVersion}",
-               "org.apache.tomcat.embed:tomcat-embed-logging-juli:8.5.2",
-               "org.apache.tomcat.embed:tomcat-embed-jasper:${tomcatVersion}"
+    // 单元测试
+    testCompile("junit:junit:4.12")
+    testRuntime("org.junit.vintage:junit-vintage-engine:4.12.0")
 
     // 日志记录
     def log4jVersion = '2.10.0'
     compile group: 'org.apache.logging.log4j', name: 'log4j-api', version: "${log4jVersion}"
     compile group: 'org.apache.logging.log4j', name: 'log4j-core', version: "${log4jVersion}"  // 日志记录
+
+    // fastjson
+    def fastJsonVersion='1.2.44'
+    // https://mvnrepository.com/artifact/com.alibaba/fastjson
+    compile group: 'com.alibaba', name: 'fastjson', version: "${fastJsonVersion}"
+
+    // ********************* Start of web *******************************
+    // tomcat容器
+    def tomcatVersion = '9.0.1'
+        tomcat "org.apache.tomcat.embed:tomcat-embed-core:${tomcatVersion}",
+               "org.apache.tomcat.embed:tomcat-embed-logging-juli:8.5.2",
+               "org.apache.tomcat.embed:tomcat-embed-jasper:${tomcatVersion}"
 
     // web文件上传
     def commonsIOVersion = '2.6'
@@ -50,17 +60,9 @@ dependencies {
     // https://mvnrepository.com/artifact/javax.servlet/jstl
     compile group: 'javax.servlet', name: 'jstl', version: "${jstlVersion}"
 
-    // fastjson
-    def fastJsonVersion='1.2.44'
-    // https://mvnrepository.com/artifact/com.alibaba/fastjson
-    compile group: 'com.alibaba', name: 'fastjson', version: "${fastJsonVersion}"
-
-    // 单元测试
-    testCompile("junit:junit:4.12")
-    testRuntime("org.junit.vintage:junit-vintage-engine:4.12.0")
-
     // servlet
     providedCompile 'javax.servlet:javax.servlet-api:3.1.0' 
+    // ****************** End of web ************************8
 
     // **************** Start of mybatis ****************
     def mybatisVersion='3.4.5'
