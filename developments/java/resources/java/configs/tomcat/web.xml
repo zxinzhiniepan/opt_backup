@@ -51,6 +51,7 @@
     </error-page>
     -->
 
+<!-- 
     <servlet>
         <servlet-name>servletname</servlet-name>
         <servlet-class>classfullname</servlet-class>
@@ -58,12 +59,30 @@
     <servlet-mapping>
         <servlet-name>servletname</servlet-name>
         <url-pattern>/urlname</url-pattern>
+-->
         <!--
              <url-pattern>/xxx/*</url-pattern> 路径匹配,如果没有精准匹配，对/xxx/路径的所有请求都由该Servlet处理
              <url-pattern>/*.xxx</url-pattern> ,如果没有精准匹配和路径匹配，则所有的.xxx扩展名的请求将由该Servlet处理
         -->
+<!--
     </servlet-mapping>
 
     <filter>
     </filter>
+-->
+    <!-- struts2 -->
+    <filter>
+        <filter-name>struts2</filter-name>
+        <filter-class>org.apache.struts2.dispatcher.filter.StrutsPrepareAndExecuteFilter</filter-class>
+        <!-- 自定义strust.xml配置文件的路径 -->
+        <init-param>
+            <param-name>config</param-name>
+            <param-value>struts-default.xml,struts2/struts.xml</param-value>
+        </init-param>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>struts2</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
 </web-app>

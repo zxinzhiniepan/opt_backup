@@ -86,6 +86,9 @@
             <AppenderRef ref="Console" />
             <AppenderRef ref="File" />
         </Logger>
+        <!-- Struts2 -->
+        <Logger name="com.opensymphony.xwork2" level="debug"/>
+                <Logger name="org.apache.struts2" level="debug"/>
         <root level="all">
             <appender-ref ref="Console"/>
             <appender-ref ref="RollingFileDebug"/>
