@@ -17,6 +17,10 @@ export PATH=$ORACLE_HOME/bin:$PATH
 export LD_LIBRARY_PATH=$ORACLE_HOME/lib:$LD_LIBRARY_PATH
 export TMP=/tmp
 alias sqlplus="rlwrap sqlplus"
+# 乱码设置
+export NLS_LANGUAGE=AMERICAN_AMERICA.UTF8
+export NLS_LANG=AMERICAN_AMERICA.UTF8
+
 # maven
 # export MAVEN_HOME=/usr/local/lib64/apache-maven
 # export PATH=${PATH}:${MAVEN_HOME}/bin
