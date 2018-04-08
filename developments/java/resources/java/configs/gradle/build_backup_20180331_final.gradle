@@ -7,7 +7,6 @@ buildscript {
     }
     dependencies {
         classpath 'org.junit.platform:junit-platform-gradle-plugin:1.0.2'
-    	classpath 'org.akhikhl.gretty:gretty:+'
     }
 }
 /************************************************************************************* End of junit5 *************************************************************************************/
@@ -17,14 +16,10 @@ plugins {
     id 'java'
     id 'war'  
     id 'application'
-//    id "com.bmuschko.tomcat" version "2.5"
+    id "com.bmuschko.tomcat" version "2.5"
 }
+apply plugin: 'org.junit.platform.gradle.plugin'
 /************************************************************************************* End of plugin *************************************************************************************/
-
-
-/************************************************************************************* Start of mainClasss *************************************************************************************/
-mainClassName='hello.HelloWorld'
-/************************************************************************************* End of mainClasss *************************************************************************************/
 
 
 
@@ -167,7 +162,6 @@ dependencies {
 /************************************************************************************* End 依赖 *************************************************************************************/
 
 /************************************************************************************* Start of Juit 配置 *************************************************************************************/
-apply plugin: 'org.junit.platform.gradle.plugin'
 junitPlatform {
     platformVersion '1.0.2' // optional, defaults to plugin version
     logManager 'org.apache.logging.log4j.jul.LogManager'
@@ -204,7 +198,6 @@ run{
 }
 
 /************************************************************************************* Servlet容器设置 *************************************************************************************/
-/*
 dependencies {
     // tomcat容器
     def tomcatVersion = '9.0.1'
@@ -233,18 +226,6 @@ tomcat{
                     roles = ['developers', 'admin']
             }
         }
-}
-*/
-
-// gretty
-//apply from: 'https://raw.github.com/akhikhl/gretty/master/pluginScripts/gretty.plugin'
-apply plugin: 'org.akhikhl.gretty'
-gretty {
-    servletContainer 'tomcat8'
-    httpPort 8090
-    logDir "./logs/gretty"
-        //contextPath = '/MyWebApp'
-        // ... many more properties
 }
 /************************************************************************************* Servlet容器设置 *************************************************************************************/
 

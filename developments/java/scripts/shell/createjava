@@ -12,10 +12,10 @@ gradle init && rm build.gradle && cp -r ${RESOURCESDIR}/java/configs/gradle/buil
 
 #不创建index
 case $1 in
-    *)
+    noindex)
         gradle iWP
         ;;
-    noindex)
+    *)
         gradle initDir
         ;;
 esac
