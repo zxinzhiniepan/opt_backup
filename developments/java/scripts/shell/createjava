@@ -6,7 +6,20 @@ PROJECTPATH=${BASEDIR}"/${PROJECT}"
 RESOURCESDIR=/home/zhanghua/.opt/developments/java/resources
 mkdir -p ${BASEDIR}/${PROJECT}
 cd  ${PROJECTPATH}
-gradle init && rm build.gradle && cp -r ${RESOURCESDIR}/java/configs/gradle/build.gradle ${BASEDIR}/${PROJECT}/build.gradle 
+case $2 in
+    "noframe")
+        gradle init && rm build.gradle && cp -r ${RESOURCESDIR}/java/configs/gradle/build_noframe.gradle ${BASEDIR}/${PROJECT}/build.gradle 
+        ;;
+    "ssh")
+        gradle init && rm build.gradle && cp -r ${RESOURCESDIR}/java/configs/gradle/build_ssh.gradle ${BASEDIR}/${PROJECT}/build.gradle 
+        ;;
+    "ssm")
+        gradle init && rm build.gradle && cp -r ${RESOURCESDIR}/java/configs/gradle/build_ssm.gradle ${BASEDIR}/${PROJECT}/build.gradle 
+        ;;
+    *)
+    gradle init && rm build.gradle && cp -r ${RESOURCESDIR}/java/configs/gradle/build.gradle ${BASEDIR}/${PROJECT}/build.gradle 
+    ;;
+esac
 # 创建index
 #gradle iWP
 

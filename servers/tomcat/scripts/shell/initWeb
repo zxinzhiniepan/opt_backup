@@ -1,8 +1,9 @@
 #!/bin/bash
 RESOURCESDIR=/home/zhanghua/.opt/developments/java/resources
-mkdir -p src/main/{resources/{sql,configs},webapp/{doc,css,WebContent,META-INF,WEB-INF/{classes,lib},js,error,media/{images,audio,video}}}
-cp ${RESOURCESDIR}/java/web/JQuery/jquery.js src/main/webapp/js/jquery.js
+mkdir -p documents/databases/{mysql,oracle}
+mkdir -p src/main/{resources/configs,webapp/{doc,css,WebContent,META-INF,WEB-INF/{classes,lib},js,error,media/{images,audio,video}}}
+#cp ${RESOURCESDIR}/java/web/JQuery/jquery.js src/main/webapp/js/jquery.js
 cp ${RESOURCESDIR}/java/configs/tomcat/web.xml src/main/webapp/WEB-INF/web.xml
-cp ${RESOURCESDIR}/java/configs/tomcat/context.xml src/main/webapp/META-INF/context.xml
+# cp ${RESOURCESDIR}/java/configs/tomcat/context.xml src/main/webapp/META-INF/context.xml
 cp ${RESOURCESDIR}/java/configs/log4j/log4j2.xml src/main/resources/configs/
 cp -r ${RESOURCESDIR}/java/configs/tomcat/error src/main/webapp
